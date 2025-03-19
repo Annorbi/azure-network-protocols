@@ -74,7 +74,6 @@ Now, you'll be prompted to install "Ncap". Go through the setup just like Wiresh
 </p>
 <p>
 At this point, Wireshark should be installed. Go ahead and open it up using the search bar.
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%"" height="60%" width="60%" 
 </p>
 <br />
 
@@ -142,12 +141,14 @@ Then, go back to powershell and connect to the linux VM from the windows VM by t
 <img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
 </p>
 As you can see, wireshark is already showing stuff as we try to connect to the Linux VM.
+<p>
 </p>
 <br />
 
 <p>
 <img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
 </p>
+<p>
 You should eventually see a screen that looks like this. You'll know you're connected to the VM when you see "[your username]@Linux". The text should also be colored.
 </p>
 <br />
