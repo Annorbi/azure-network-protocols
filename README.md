@@ -1,4 +1,4 @@
-# azure-network-protocols
+![image](https://github.com/user-attachments/assets/c0b3a74a-ba74-4ee4-8e95-ee5a732b4e2c)# azure-network-protocols
 <p align="center">
 <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
@@ -21,7 +21,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (22H2)
-- Ubuntu Server 20.04
+- Ubuntu Server 22.04
 
 <h2>High-Level Steps</h2>
 
@@ -152,3 +152,28 @@ As you can see, wireshark is already showing stuff as we try to connect to the L
 You should eventually see a screen that looks like this. You'll know you're connected to the VM when you see "[your username]@Linux". The text should also be colored.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+</p>
+<p>
+From here, you can type in commands as you would on a Linux computer. As you type commands on PowerShell, you'll see them translated into Wireshark. Once you're done experimenting on Linux, you can switch back to Windows by typing "Exit"
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+</p>
+<p>
+Next, we will be observing DHCP (Dynamic Host Configuration Protocol). Just like in SSH, restart the packet-capturing software. To observe DHCP traffic, we must set things up. First, on the bar, type "udp.port == 67 udp.port == 68"
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+</p>
+<p>
+Open notepad, enter “ipconfig /release” and ipconfig /renew; name it "Dhcp.bat" and save it "as all files" for the file type. Save the file in <i>programdata</i>. In order to do so, you'll have to access  thought the c:\ drive. It should look like this: ”c:\programdata”.
+</p>
+<br />
+
