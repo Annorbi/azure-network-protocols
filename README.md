@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c0b3a74a-ba74-4ee4-8e95-ee5a732b4e2c)# azure-network-protocols
+# azure-network-protocols
 <p align="center">
 <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
