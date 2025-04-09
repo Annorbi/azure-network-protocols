@@ -87,37 +87,37 @@ When first opening up Wireshark, a screen like this one should appear. Select "E
 
 
 <p>
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+<img src="https://i.imgur.com/kVqZupY.png" height="60%" width="60%" 
 </p>
 <p>
-In the Wireshark search bar, write down "ICMP" (Internet Control Message Protocol) to filter for ICMP traffic only. As you can see, there's nothing showing up, this is because there is no ICMP traffic at the moment. We will be creating some shortly.
-</p>
-<br />
-
-
-<p>
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
-</p>
-<p>
-On Azure find the private address of the linux vm. To do, goto virtual machines → [your linux machine name] → Overview. There should be a networking tab. Grab the private ip adress.
-<img src="https://i.imgur.com/5y0QMUZ.png" height="20%" width="20%" <p> <img src="https://i.imgur.com/kGZiea6.png" height="20%" width="20%" <p> <img src="https://i.imgur.com/Bx49QXR.png" height="20%" width="20%" <p> <img src="https://i.imgur.com/yLVMgw9.png" height="20%" width="20%" <p> <img src="https://i.imgur.com/If7a47q.png" height="20%" width="20%" <p> <img src="https://i.imgur.com/pjFmuYx.png" height="20%" width="20%" <p> <img src="https://i.imgur.com/RZzPgCh.png" height="20%" width="20%" <p> <img src="https://i.imgur.com/zFS7pyY.png" height="20%" width="20%"
-</p>
-<p>
-Once you have the ip adress open up "Powershell" and "ping [private address]". You'll notice that while you're pinging the linux VM, Wireshark is also working in the background, capturing those packets. You should be able to see the packets in Wireshark.
+In the Wireshark search bar, write down "ICMP" (Internet Control Message Protocol) to filter for ICMP traffic only. As you can see, there should be nothing showing up, this is because there is no ICMP traffic at the moment. We will be creating some shortly.
 </p>
 <br />
 
 
 <p>
-<img src="https://i.imgur.com/SgJZs3g.png" height="80%" width="80%" 
+<img src="https://i.imgur.com/8js3jUn.png" height="60%" width="60%" 
 </p>
 <p>
-You can explore ICMP traffic further by pinging random sites. For example, let's try to ping "www.google.com". Just like the ping to the Linux Virtual machine, Wireshark is receiving the requests and replies of from the pings. Feel free to experiment with any other sites if you wish.
+On Azure find the private address of the linux vm. To do that, go to virtual machines → [your Linux machine name] → Overview. There should be a networking tab. Grab the private IP address.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+<img src="https://i.imgur.com/SgJZs3g.png" height="60%" width="60%" 
+</p>
+<p>
+Once you have the Ip address open up "Powershell" and "ping [private address]". You'll notice that while you're pinging the Linux VM, Wireshark is also working in the background, capturing those packets. You should be able to see the packets in Wireshark.
+</p>
+<br />
+</p>
+<p>
+You can explore ICMP traffic further by pinging random sites. For example, let's try to ping "www.google.com". Just like the ping to the Linux Virtual machine, Wireshark receives the requests and replies of the packets from the pings. Feel free to experiment with any other sites if you wish.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/VWskO8X.png" height="30%" width="30%" <p> <img src="https://i.imgur.com/TFm6fou.png" height="30%" width="30%" <p> <img src="https://i.imgur.com/kVqZupY.png" height="30%" width="30%"
 </p>
 When you're done filtering for ICMP, make sure to reset the capturing software. This should give you a cleared screen.
 <p>
@@ -130,31 +130,27 @@ Next, let's try to filter for SSH (Secure Shell). Just like ICMP, enter "SSH" in
 <p>
 </p>
 <p>
+<img src="https://i.imgur.com/9moa3Fv.png" height="60%" width="60%" 
+</p>
+<br />
+
+<p></p>
+Then, open up powershell if you closed it and connect to the linux VM from the windows VM by typing “ssh labuser@[private ip address of the linux]" and pressing "enter". So in my case it would look like this: <i>ssh labuser@10.0.0.7</i>. You'll then be prompted to enter your password. Note that you won't be able to see your password as you type it for security reasons but it is being typed so make sure that you type it correctly. As you can see, wireshark is already showing stuff as we try to connect to the Linux VM.
 <img src="https://i.imgur.com/ZySst6H.png" height="60%" width="60%" 
-</p>
-Then, go back to powershell and connect to the linux VM from the windows VM by typing “ssh labuser@[private ip address of the linux]" and pressing "enter". So in my case it would look like this: ssh labuser@10.0.0.7. You'll then be prompted to enter your password. Note that you won't be able to see your password as you type it for security reasons but it is being typed so make sure that you type it correctly.
 <p>
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
-</p>
-As you can see, wireshark is already showing stuff as we try to connect to the Linux VM.
-<p>
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+<img src="https://i.imgur.com/gTMXlpG.png" height="60%" width="60%" 
 </p>
 <p>
-You should eventually see a screen that looks like this. You'll know you're connected to the VM when you see "[your username]@Linux". The text should also be colored.
+You should eventually see a screen that looks like this. You'll know you're connected to the Linux VM when you see "[your username]@Linux". The text should also be colored and stand out.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+<img src="https://i.imgur.com/Zeyx0zo.png" height="60%" width="60%" 
 </p>
 <p>
 From here, you can type in commands as you would on a Linux computer. As you type commands on PowerShell, you'll see them translated into Wireshark. Once you're done experimenting on Linux, you can switch back to Windows by typing "Exit"
@@ -162,7 +158,7 @@ From here, you can type in commands as you would on a Linux computer. As you typ
 <br />
 
 <p>
-<img src="https://i.imgur.com/snhWpOP.png" height="60%" width="60%" 
+<img src="https://i.imgur.com/VWskO8X.png" height="30%" width="30%" <p> <img src="https://i.imgur.com/TFm6fou.png" height="30%" width="30%" <p> <img src="https://i.imgur.com/LK9YzJN.png"
 </p>
 <p>
 Next, we will be observing DHCP (Dynamic Host Configuration Protocol). Just like in SSH, restart the packet-capturing software. To observe DHCP traffic, we must set things up. First, on the bar, type "udp.port == 67 udp.port == 68"
@@ -170,7 +166,7 @@ Next, we will be observing DHCP (Dynamic Host Configuration Protocol). Just like
 <br />
 
 <p>
-<img src="https://i.imgur.com/H9oZoDZ.png" height="60%" width="60%" ***
+<img src="https://i.imgur.com/RCqax2h.png" height="30%" width="30%" <p> <img src="https://i.imgur.com/b03zsay.png" height="30%" width="30%"
 </p>
 <p>
 Open notepad, enter “ipconfig /release” and ipconfig /renew; name it "Dhcp.bat" and save it "as all files" for the file type. Save the file in <i>programdata</i>. In order to do so, you'll have to access throught the c:\ drive. It should look like this: ”c:\programdata”.
@@ -179,19 +175,19 @@ Open notepad, enter “ipconfig /release” and ipconfig /renew; name it "Dhcp.b
 
 
 <p>
-<img src="https://i.imgur.com/zUzC0x1.png" height="60%" width="60%" 
+<img src="https://i.imgur.com/zUzC0x1.png" height="60%" width="60%" <p> <img src="https://i.imgur.com/Mc1aKrY.png"
 </p>
 <p>
-You can use command “ls” to list the file contents of the folder; check to see if the bat file created earlier is present.
+Back to powershell, you may use command “cd” to change directories to programdata like this: <b>“cd c:\programdata”</b>. To see all the files in that folder, you can use command “ls” to list the file contents of the folder; check to see if the bat file created earlier is present.
 </p>
 <br />
 
 
 <p>
-<img src="https://i.imgur.com/C6lhgdW.png" height="60%" width="60%" 
+<img src="https://i.imgur.com/MYHeEeh.png" height="40%" width="40%" <p> <img src="https://i.imgur.com/mZWBRa5.png" height="40%" width="40%"
 </p>
 <p>
-Once you've located the file, you can run it by using “./Dhcp.bat”. You'll notice that the VM will restart; this is normal as it is releasing and rewewing the IP address. Once the VM has been restarted, go ahead and log back in; you'll see everything was left the same prior to the restart. Furthermore, you should now see that Wireshark actually displayed new entries.
+Once you've located the file, you can run it by using “./Dhcp.bat”. You'll notice that the VM will restart; this is normal as it is releasing and rewewing the IP address. Once the VM has been restarted, you'll see everything was left the same prior to the restart except for a couple of new entries in Wireshark. Go ahead and take a look. When you're done, restart the capture once again.
 </p>
 <br />
 
